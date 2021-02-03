@@ -32,6 +32,7 @@ namespace ModerrLauncher
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panelLogIn = new System.Windows.Forms.Panel();
             this.checkBoxRemeberMe = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,18 +40,17 @@ namespace ModerrLauncher
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonQuit = new System.Windows.Forms.Button();
             this.panelRegister = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxRegisterName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxRegisterEmail = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.textBoxRegisterPassword = new System.Windows.Forms.TextBox();
-            this.textBoxRegisterName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panelLogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRegister.SuspendLayout();
@@ -86,6 +86,17 @@ namespace ModerrLauncher
             this.checkBoxRemeberMe.TabIndex = 7;
             this.checkBoxRemeberMe.Text = "Nie wylogowuj mnie";
             this.checkBoxRemeberMe.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 409);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(328, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Jeżeli nie masz konta Moderr Account kliknij tutaj";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -176,17 +187,6 @@ namespace ModerrLauncher
             this.textBoxPassword.WordWrap = false;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 409);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Jeżeli nie masz konta Moderr Account kliknij tutaj";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // buttonQuit
             // 
             this.buttonQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -218,6 +218,42 @@ namespace ModerrLauncher
             this.panelRegister.Size = new System.Drawing.Size(354, 432);
             this.panelRegister.TabIndex = 8;
             this.panelRegister.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(10, 149);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(325, 24);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "NAZWA UŻYTKOWNIKA";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(10, 219);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(325, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "EMAIL";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // textBoxRegisterName
+            // 
+            this.textBoxRegisterName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.textBoxRegisterName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxRegisterName.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxRegisterName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.textBoxRegisterName.Location = new System.Drawing.Point(10, 176);
+            this.textBoxRegisterName.Multiline = true;
+            this.textBoxRegisterName.Name = "textBoxRegisterName";
+            this.textBoxRegisterName.Size = new System.Drawing.Size(325, 40);
+            this.textBoxRegisterName.TabIndex = 8;
+            this.textBoxRegisterName.WordWrap = false;
+            this.textBoxRegisterName.TextChanged += new System.EventHandler(this.textBoxRegisterName_TextChanged);
             // 
             // label6
             // 
@@ -297,42 +333,6 @@ namespace ModerrLauncher
             this.textBoxRegisterPassword.WordWrap = false;
             this.textBoxRegisterPassword.TextChanged += new System.EventHandler(this.textBoxRegisterPassword_TextChanged);
             // 
-            // textBoxRegisterName
-            // 
-            this.textBoxRegisterName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBoxRegisterName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRegisterName.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxRegisterName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.textBoxRegisterName.Location = new System.Drawing.Point(10, 176);
-            this.textBoxRegisterName.Multiline = true;
-            this.textBoxRegisterName.Name = "textBoxRegisterName";
-            this.textBoxRegisterName.Size = new System.Drawing.Size(325, 40);
-            this.textBoxRegisterName.TabIndex = 8;
-            this.textBoxRegisterName.WordWrap = false;
-            this.textBoxRegisterName.TextChanged += new System.EventHandler(this.textBoxRegisterName_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(10, 219);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(325, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "EMAIL";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(10, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(325, 24);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "NAZWA UŻYTKOWNIKA";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +347,7 @@ namespace ModerrLauncher
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
             this.panelLogIn.ResumeLayout(false);
             this.panelLogIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

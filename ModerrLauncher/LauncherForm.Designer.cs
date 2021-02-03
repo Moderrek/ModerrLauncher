@@ -34,7 +34,8 @@ namespace ModerrLauncher
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LauncherForm));
             this.LauncherTray = new System.Windows.Forms.NotifyIcon(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSidebar = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonChat = new System.Windows.Forms.Button();
             this.buttonMyGames = new System.Windows.Forms.Button();
@@ -44,13 +45,13 @@ namespace ModerrLauncher
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.userNameLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new MLCore.CirclePictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.userPicture = new MLCore.CirclePictureBox();
+            this.childPanel = new System.Windows.Forms.Panel();
+            this.buttonDevour = new System.Windows.Forms.Button();
+            this.panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // LauncherTray
@@ -59,23 +60,34 @@ namespace ModerrLauncher
             this.LauncherTray.Text = "Moderr Launcher";
             this.LauncherTray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LauncherTray_MouseDoubleClick);
             // 
-            // panel1
+            // panelSidebar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.buttonSettings);
-            this.panel1.Controls.Add(this.buttonChat);
-            this.panel1.Controls.Add(this.buttonMyGames);
-            this.panel1.Controls.Add(this.buttonSearchGames);
-            this.panel1.Controls.Add(this.buttonHome);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 644);
-            this.panel1.TabIndex = 1;
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panelSidebar.Controls.Add(this.buttonDevour);
+            this.panelSidebar.Controls.Add(this.label2);
+            this.panelSidebar.Controls.Add(this.buttonSettings);
+            this.panelSidebar.Controls.Add(this.buttonChat);
+            this.panelSidebar.Controls.Add(this.buttonMyGames);
+            this.panelSidebar.Controls.Add(this.buttonSearchGames);
+            this.panelSidebar.Controls.Add(this.buttonHome);
+            this.panelSidebar.Controls.Add(this.label1);
+            this.panelSidebar.Controls.Add(this.pictureBox1);
+            this.panelSidebar.Controls.Add(this.panel2);
+            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Name = "panelSidebar";
+            this.panelSidebar.Size = new System.Drawing.Size(213, 644);
+            this.panelSidebar.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.label2.Location = new System.Drawing.Point(48, 623);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 17);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "v0.1";
             // 
             // buttonSettings
             // 
@@ -94,11 +106,13 @@ namespace ModerrLauncher
             this.buttonSettings.TabIndex = 10;
             this.buttonSettings.Text = "USTAWIENIA";
             this.buttonSettings.UseVisualStyleBackColor = false;
+            this.buttonSettings.Click += new System.EventHandler(this.btnClick);
             // 
             // buttonChat
             // 
             this.buttonChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.buttonChat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonChat.Enabled = false;
             this.buttonChat.FlatAppearance.BorderSize = 0;
             this.buttonChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChat.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -112,11 +126,13 @@ namespace ModerrLauncher
             this.buttonChat.TabIndex = 9;
             this.buttonChat.Text = "ROZMOWY";
             this.buttonChat.UseVisualStyleBackColor = false;
+            this.buttonChat.Click += new System.EventHandler(this.btnClick);
             // 
             // buttonMyGames
             // 
             this.buttonMyGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.buttonMyGames.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMyGames.Enabled = false;
             this.buttonMyGames.FlatAppearance.BorderSize = 0;
             this.buttonMyGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMyGames.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -130,11 +146,13 @@ namespace ModerrLauncher
             this.buttonMyGames.TabIndex = 8;
             this.buttonMyGames.Text = "TWOJE GRY";
             this.buttonMyGames.UseVisualStyleBackColor = false;
+            this.buttonMyGames.Click += new System.EventHandler(this.btnClick);
             // 
             // buttonSearchGames
             // 
             this.buttonSearchGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.buttonSearchGames.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSearchGames.Enabled = false;
             this.buttonSearchGames.FlatAppearance.BorderSize = 0;
             this.buttonSearchGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchGames.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -148,6 +166,7 @@ namespace ModerrLauncher
             this.buttonSearchGames.TabIndex = 7;
             this.buttonSearchGames.Text = "PRZEGLĄDAJ GRY";
             this.buttonSearchGames.UseVisualStyleBackColor = false;
+            this.buttonSearchGames.Click += new System.EventHandler(this.btnClick);
             // 
             // buttonHome
             // 
@@ -166,6 +185,7 @@ namespace ModerrLauncher
             this.buttonHome.TabIndex = 6;
             this.buttonHome.Text = "STRONA GŁÓWNA";
             this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.btnClick);
             // 
             // label1
             // 
@@ -191,7 +211,7 @@ namespace ModerrLauncher
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.panel2.Controls.Add(this.userNameLabel);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.userPicture);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -209,33 +229,42 @@ namespace ModerrLauncher
             this.userNameLabel.Text = "Nazwa użytkownika";
             this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
+            // userPicture
             // 
-            this.pictureBox2.Image = global::ModerrLauncher.Properties.Resources.default_user;
-            this.pictureBox2.Location = new System.Drawing.Point(66, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.userPicture.Image = global::ModerrLauncher.Properties.Resources.default_user;
+            this.userPicture.Location = new System.Drawing.Point(66, 12);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(80, 80);
+            this.userPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPicture.TabIndex = 2;
+            this.userPicture.TabStop = false;
             // 
-            // panel3
+            // childPanel
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(213, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(969, 644);
-            this.panel3.TabIndex = 2;
+            this.childPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childPanel.Location = new System.Drawing.Point(213, 0);
+            this.childPanel.Name = "childPanel";
+            this.childPanel.Size = new System.Drawing.Size(969, 644);
+            this.childPanel.TabIndex = 2;
             // 
-            // label2
+            // buttonDevour
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(48, 623);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "v0.1";
+            this.buttonDevour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.buttonDevour.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDevour.FlatAppearance.BorderSize = 0;
+            this.buttonDevour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDevour.Font = new System.Drawing.Font("Mistral", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDevour.ForeColor = System.Drawing.Color.IndianRed;
+            this.buttonDevour.Image = global::ModerrLauncher.Properties.Resources.icon_game;
+            this.buttonDevour.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDevour.Location = new System.Drawing.Point(0, 384);
+            this.buttonDevour.Name = "buttonDevour";
+            this.buttonDevour.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.buttonDevour.Size = new System.Drawing.Size(213, 50);
+            this.buttonDevour.TabIndex = 12;
+            this.buttonDevour.Text = "DEVOUR";
+            this.buttonDevour.UseVisualStyleBackColor = false;
+            this.buttonDevour.Click += new System.EventHandler(this.btnClick);
             // 
             // LauncherForm
             // 
@@ -243,16 +272,18 @@ namespace ModerrLauncher
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1182, 644);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.childPanel);
+            this.Controls.Add(this.panelSidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1198, 683);
             this.Name = "LauncherForm";
             this.Text = "Moderr Launcher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LauncherForm_FormClosing);
             this.Resize += new System.EventHandler(this.LauncherForm_Resize);
-            this.panel1.ResumeLayout(false);
+            this.panelSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,7 +291,7 @@ namespace ModerrLauncher
         #endregion
 
         private System.Windows.Forms.NotifyIcon LauncherTray;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonSettings;
@@ -270,8 +301,9 @@ namespace ModerrLauncher
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label userNameLabel;
-        private CirclePictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel3;
+        private CirclePictureBox userPicture;
+        private System.Windows.Forms.Panel childPanel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonDevour;
     }
 }

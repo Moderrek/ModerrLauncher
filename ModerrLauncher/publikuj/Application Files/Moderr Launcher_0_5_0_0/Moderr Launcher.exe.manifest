@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Moderr Launcher.exe" version="0.5.0.0" publicKeyToken="ffc4e3f517077f28" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Moderr Launcher" version="0.15.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Moderr Launcher.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site" Unrestricted="true" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Opcje manifestu Kontroli konta użytkownika
+             Jeśli chcesz zmienić poziom Kontroli konta użytkownika systemu Windows, zastąp 
+             węzeł requestedExecutionLevel jednym z następujących.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Określenie elementu requestedExecutionLevel spowoduje wyłączenie wirtualizacji plików i rejestru. 
+            Usuń ten element, jeśli aplikacja wymaga wirtualizacji w celu zachowania
+            zgodności z poprzednimi wersjami.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MLCore.dll" size="51200">
+      <assemblyIdentity name="MLCore" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>30Ox1xl4BhD9Rn5ZLvJvO2ssLUnTB6MtaZfQ6ygPFDg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Moderr Launcher.exe" size="418888">
+      <assemblyIdentity name="Moderr Launcher" version="0.15.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6eC1aSHsUXkFb65vV05kNHKkNeA6Wq4eR6U5h3fnt90=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="icon.ico" size="39453">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IXVrN8vbe4URWmJV3tK/HaVCngpl36Z5AUddBRUbf+I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Moderr Launcher.exe.config" size="306">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YKTP+38as9QZQjjVzYIrbYqkrfL/p5aI8po84GoTdgc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Lista wersji systemu Windows, na których ta aplikacja została przetestowana
+           i dla których została zaprojektowana. Odkomentuj odpowiednie elementy, a system Windows
+           automatycznie wybierze najbardziej zgodne środowisko. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN={62DBF90B-35C3-44B8-9A6A-E50DEA932781}" issuerKeyHash="a5be65353c33bc2518f3116877e979011a5c3612" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vCHML+IYZW8jQ/ouY03cF2rlCb9FeevYpiPSlrUt/Ws=</DigestValue></Reference></SignedInfo><SignatureValue>RIiFiE2cQdfxEEteXwvhw0Ymto8Mt40lf7BLCZOIW63i8R7a9+rN7xIpMMG7sYv9poN64yf4qpZk824dZ/wx90C5jWLysaKstVvl/Ky96VNY0p92uJ7xrSC297bNlzYbUDZa2P/hvA+fZiCiYRfKIr6bICFLCX5ozJOvFCwbG5I=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>4E3MS9VfpraJ7px0S2K4tflgivePdBZdShDW72HXNDXQ+C4f/W0zcwPdktqraDEiC4jVFA04jfByNaCh9e5dy5GM2on6NcT5EvY/td46Z/G5GoL6vOcUeyPHVt5VHxunJejRoMUHEmPxPYb4rY0mRl+JyvbmWZ8DaXn0alQyDPE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6bfd2db596d223a6d8eb7945bf09e56a17dc4d632efa43236f6518e22fcc21bc" Description="" Url=""><as:assemblyIdentity name="Moderr Launcher.exe" version="0.5.0.0" publicKeyToken="ffc4e3f517077f28" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN={62DBF90B-35C3-44B8-9A6A-E50DEA932781}</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>oNtj/EVOD3y3Qr6lN4jreD4e/m5fH5t8u2l4mTEJUxY=</DigestValue></Reference></SignedInfo><SignatureValue>plmSijXMRDEr/XqENIqN/byhXGa3aP9NzeYZ1nK+snm9FefoEk+uH0UbcmFDEmvYQIe6S8cZq9nApa2/xIMTC1CtMjwJlj93wIMW5tRn5n+JQWLLCjmwOyBAacJBjTFUQhW49zNhRmQ1UXyQK/rdQG8WOd8HQ6k6yZhLKPTg7wU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4E3MS9VfpraJ7px0S2K4tflgivePdBZdShDW72HXNDXQ+C4f/W0zcwPdktqraDEiC4jVFA04jfByNaCh9e5dy5GM2on6NcT5EvY/td46Z/G5GoL6vOcUeyPHVt5VHxunJejRoMUHEmPxPYb4rY0mRl+JyvbmWZ8DaXn0alQyDPE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICMTCCAZqgAwIBAgIQffyG4HPttbtP6vGbjgSr4TANBgkqhkiG9w0BAQsFADBXMVUwUwYDVQQDHkwAewA2ADIARABCAEYAOQAwAEIALQAzADUAQwAzAC0ANAA0AEIAOAAtADkAQQA2AEEALQBFADUAMABEAEUAQQA5ADMAMgA3ADgAMQB9MB4XDTIxMDEyNjA4MjUyNloXDTIyMDEyNjE0MjUyNlowVzFVMFMGA1UEAx5MAHsANgAyAEQAQgBGADkAMABCAC0AMwA1AEMAMwAtADQANABCADgALQA5AEEANgBBAC0ARQA1ADAARABFAEEAOQAzADIANwA4ADEAfTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4E3MS9VfpraJ7px0S2K4tflgivePdBZdShDW72HXNDXQ+C4f/W0zcwPdktqraDEiC4jVFA04jfByNaCh9e5dy5GM2on6NcT5EvY/td46Z/G5GoL6vOcUeyPHVt5VHxunJejRoMUHEmPxPYb4rY0mRl+JyvbmWZ8DaXn0alQyDPECAwEAATANBgkqhkiG9w0BAQsFAAOBgQBShIx3ZxwsQaBSFaku8Pl/d2bcEZrvWHX7HFnquPkHtndIeBlZxhTFtZM8tey0rmiKmCV1lFYJ+ATEkjrj7HNiJ3MME+zGiwtCKXVpvsKjTLws7KNAzSuNyhACxs7zUufCFD4T3VtXIyhEHVEIoOTj1uSaL3fz/ckPJE9DUdVH8w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

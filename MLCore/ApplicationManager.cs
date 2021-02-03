@@ -10,7 +10,7 @@ namespace MLCore
     public class ApplicationManager
     {
         
-        public static List<ApplicationConfig> getAllApplications()
+        /*public static List<ApplicationConfig> getAllApplications()
         {
             List<ApplicationConfig> apps = new List<ApplicationConfig>();
             DirectoryInfo appDir = new DirectoryInfo(PathManager.getApplicationsDir());
@@ -75,7 +75,7 @@ namespace MLCore
                 writer.Write(config.ToString());
                 Console.WriteLine(config.ToString());
             }
-        }
+        }*/
 
     }
 }

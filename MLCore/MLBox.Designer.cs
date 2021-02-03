@@ -42,10 +42,10 @@ namespace MLCore
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.btn.Location = new System.Drawing.Point(207, 96);
+            this.btn.Location = new System.Drawing.Point(217, 104);
             this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(124, 28);
-            this.btn.TabIndex = 0;
+            this.btn.Size = new System.Drawing.Size(124, 31);
+            this.btn.TabIndex = 10;
             this.btn.Text = "btnName";
             this.btn.UseVisualStyleBackColor = false;
             this.btn.Click += new System.EventHandler(this.btn_Click);
@@ -63,11 +63,12 @@ namespace MLCore
             // 
             // labelDescription
             // 
+            this.labelDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(0)))));
             this.labelDescription.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.labelDescription.Location = new System.Drawing.Point(12, 33);
+            this.labelDescription.Location = new System.Drawing.Point(9, 33);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(319, 63);
+            this.labelDescription.Size = new System.Drawing.Size(322, 68);
             this.labelDescription.TabIndex = 2;
             this.labelDescription.Text = "Description";
             // 

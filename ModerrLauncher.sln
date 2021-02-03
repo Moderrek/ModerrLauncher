@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModerrLauncher", "ModerrLau
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLCore", "MLCore\MLCore.csproj", "{58BA266C-E43C-4DD8-BEB4-8566EC3B932A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MLInstaller", "MLInstaller\MLInstaller.vdproj", "{6FA12BDE-E729-4467-A48C-F5CC8A0AD008}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{58BA266C-E43C-4DD8-BEB4-8566EC3B932A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58BA266C-E43C-4DD8-BEB4-8566EC3B932A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58BA266C-E43C-4DD8-BEB4-8566EC3B932A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA12BDE-E729-4467-A48C-F5CC8A0AD008}.Debug|Any CPU.ActiveCfg = Debug
+		{6FA12BDE-E729-4467-A48C-F5CC8A0AD008}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
